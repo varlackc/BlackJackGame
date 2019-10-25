@@ -1,0 +1,11 @@
+C:\Users\Owner\source\repos\BlackJackGameDemo\BlackJackGame\obj\Debug\netcoreapp2.2\BlackJackGame.csprojAssemblyReference.cache
+C:\Users\Owner\source\repos\BlackJackGameDemo\BlackJackGame\obj\Debug\netcoreapp2.2\BlackJackGame.csproj.CoreCompileInputs.cache
+C:\Users\Owner\source\repos\BlackJackGameDemo\BlackJackGame\obj\Debug\netcoreapp2.2\BlackJackGame.AssemblyInfoInputs.cache
+C:\Users\Owner\source\repos\BlackJackGameDemo\BlackJackGame\obj\Debug\netcoreapp2.2\BlackJackGame.AssemblyInfo.cs
+C:\Users\Owner\source\repos\BlackJackGameDemo\BlackJackGame\bin\Debug\netcoreapp2.2\BlackJackGame.deps.json
+C:\Users\Owner\source\repos\BlackJackGameDemo\BlackJackGame\bin\Debug\netcoreapp2.2\BlackJackGame.runtimeconfig.json
+C:\Users\Owner\source\repos\BlackJackGameDemo\BlackJackGame\bin\Debug\netcoreapp2.2\BlackJackGame.runtimeconfig.dev.json
+C:\Users\Owner\source\repos\BlackJackGameDemo\BlackJackGame\bin\Debug\netcoreapp2.2\BlackJackGame.dll
+C:\Users\Owner\source\repos\BlackJackGameDemo\BlackJackGame\bin\Debug\netcoreapp2.2\BlackJackGame.pdb
+C:\Users\Owner\source\repos\BlackJackGameDemo\BlackJackGame\obj\Debug\netcoreapp2.2\BlackJackGame.dll
+C:\Users\Owner\source\repos\BlackJackGameDemo\BlackJackGame\obj\Debug\netcoreapp2.2\BlackJackGame.pdb
