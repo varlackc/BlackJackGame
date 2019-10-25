@@ -169,7 +169,7 @@ namespace BlackJackGame.Resources
         {
             bool result = false;
             int count = 0;
-            string[] faces = { "Ace", "Deuce", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King" };
+            string[] faces = { "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K" };
 
             //loop through the hand to see if there are any pairs
             for (int l = 0; l < hand.Length; l++)
