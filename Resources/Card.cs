@@ -20,7 +20,7 @@ namespace BlackJackGame.Resources
             Suit = suit; // initialize suit of card
         }
         //return string representation of Card
-        public override string ToString() => $"{Face} of {Suit}";
+       public override string ToString() => $"{Face} of {Suit}";
     }
 }
 
