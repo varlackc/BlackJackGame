@@ -19,7 +19,7 @@ namespace BlackJackGame.Resources
 
         public DeckOfCards()
         {
-            string[] faces = { "Ace", "Deuce", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King" };
+            string[] faces = { "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K" };
             string[] suits = { "Hears", "Diamonds", "Clubs", "Spades" };
 
             // populate the deck with Card Objects
@@ -66,7 +66,7 @@ namespace BlackJackGame.Resources
         public static bool ContainsPair(Card[] hand)
         {
             bool result = false;
-            string[] faces = { "Ace", "Deuce", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King" };
+            string[] faces = { "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K" };
 
             //loop through the hand to see if there are any pairs
             for (int l = 0; l < hand.Length; l++)
@@ -95,7 +95,7 @@ namespace BlackJackGame.Resources
         {
             int count = 0;
             bool result = false;
-            string[] faces = { "Ace", "Deuce", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King" };
+            string[] faces = { "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K" };
 
 
             //loop through the hand to see if there are any pairs
@@ -132,7 +132,7 @@ namespace BlackJackGame.Resources
         {
             bool result = false;
             int count = 0;
-            string[] faces = { "Ace", "Deuce", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King" };
+            string[] faces = { "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K" };
 
             //loop through the hand to see if there are any pairs
             for (int l = 0; l < hand.Length; l++)
@@ -244,7 +244,7 @@ namespace BlackJackGame.Resources
             bool result = false;
             bool gap = false;
             int[] cardValues = new int[5]; // create array of card values
-            string[] faces = { "Ace", "Deuce", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King" };
+            string[] faces = { "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K" };
 
             // This method change the card values from text to integers, to make it easier to sort
             cardValues = PopulateCardValue(hand);
