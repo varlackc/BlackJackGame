@@ -20,12 +20,12 @@ namespace BlackJackGame.Resources
         public DeckOfCards()
         {
             string[] faces = { "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K" };
-            string[] suits = { "Hears", "Diamonds", "Clubs", "Spades" };
+            string[] suits = { "Hears", "Spades", "Diamonds", "Clubs" };
 
             // populate the deck with Card Objects
             for (var count = 0; count < deck.Length; ++count)
             {
-                deck[count] = new Card(faces[count % 13], suits[count / 13]);//original value is 13
+                deck[count] = new Card(faces[count % 13], suits[count / 13]);
             }
         }
 

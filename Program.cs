@@ -30,21 +30,21 @@ namespace BlackJackGame
                     //Run the Hand operations in this code section
                     Console.WriteLine("\n");
 
-                    var handResult = DeckOfCards.ContainsPair(hand);//Check if the hand contains pairs 
-                    Console.WriteLine("Contains a Pair: " + handResult);
-                    handResult = DeckOfCards.ContainsTwoPair(hand);//Check if the hand contains pairs 
-                    Console.WriteLine("Contains two Pairs: " + handResult);
-                    handResult = DeckOfCards.ContainsThreeOfKind(hand);
-                    Console.WriteLine("Contains three Cards Of Same Type: " + handResult);
-                    handResult = DeckOfCards.ContainsFourOfKind(hand);
-                    Console.WriteLine("Contains Four Cards Of Same Type: " + handResult);
-                    handResult = DeckOfCards.ContainsFlush(hand);
-                    Console.WriteLine("Contains A Flush: " + handResult);
-                    handResult = DeckOfCards.ContainsStraight(hand);
-                    Console.WriteLine("Contains A Straight: " + handResult);
-                    handResult = DeckOfCards.ContainsFullHouse(hand);
-                    Console.WriteLine("Contains Contains Full House: " + handResult);
-                    Console.WriteLine("\n\n");
+                    //var handResult = DeckOfCards.ContainsPair(hand);//Check if the hand contains pairs 
+                    //Console.WriteLine("Contains a Pair: " + handResult);
+                    //handResult = DeckOfCards.ContainsTwoPair(hand);//Check if the hand contains pairs 
+                    //Console.WriteLine("Contains two Pairs: " + handResult);
+                    //handResult = DeckOfCards.ContainsThreeOfKind(hand);
+                    //Console.WriteLine("Contains three Cards Of Same Type: " + handResult);
+                    //handResult = DeckOfCards.ContainsFourOfKind(hand);
+                    //Console.WriteLine("Contains Four Cards Of Same Type: " + handResult);
+                    //handResult = DeckOfCards.ContainsFlush(hand);
+                    //Console.WriteLine("Contains A Flush: " + handResult);
+                    //handResult = DeckOfCards.ContainsStraight(hand);
+                    //Console.WriteLine("Contains A Straight: " + handResult);
+                    //handResult = DeckOfCards.ContainsFullHouse(hand);
+                    //Console.WriteLine("Contains Contains Full House: " + handResult);
+                    //Console.WriteLine("\n\n");
                 }
             }
 
@@ -57,10 +57,10 @@ namespace BlackJackGame
             Console.WriteLine();
             Console.WriteLine("\t-----------------------------------------------");
             Console.WriteLine("\t|                                             |");
-            Console.WriteLine("\t| This Program Simulates a Card Deck and gets |");
-            Console.WriteLine("\t| the information relevant to a poker game.   |");
+            Console.WriteLine("\t| This Program Simulates A Black Jack Game.   |");
             Console.WriteLine("\t|                                             |");
-            Console.WriteLine("\t| Exercise: 8.29                              |");
+            Console.WriteLine("\t|                                             |");
+            Console.WriteLine("\t| Author: Carlos Maxwell Varlack              |");
             Console.WriteLine("\t|                                             |");
             Console.WriteLine("\t-----------------------------------------------");
             Console.WriteLine();
