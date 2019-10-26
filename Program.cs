@@ -29,12 +29,8 @@ namespace BlackJackGame
                 //shuffle the shoe of cards
                 shoeOfCards.Shuffle();
 
-
-                //pay the hand
-                card = shoeOfCards.Deal();//get a card from the shoe
-                player.AddCardToHand(card);// add to hand
-                card = shoeOfCards.Deal();
-                player.AddCardToHand(card);
+                //pay the hand give the shoe of cards to the user
+                player.PlayHand(shoeOfCards);
 
                 //show hand
                 player.ShowHand();

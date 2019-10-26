@@ -38,5 +38,16 @@ namespace BlackJackGame.Resources
         public void DiscardHand() {
             hand.Clear();
         }
+
+        public void PlayHand(Shoe shoe) {
+            //create a new card
+            Card card = new Card(null, null);
+
+            //pay the hand
+            card = shoe.Deal();//get a card from the shoe
+            AddCardToHand(card);// add to hand
+            card = shoe.Deal();
+            AddCardToHand(card);
+        }
     }
 }
