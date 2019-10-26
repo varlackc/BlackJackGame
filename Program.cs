@@ -8,14 +8,25 @@ namespace BlackJackGame
         // execute app
         static void Main(string[] args)
         {
+            //Explain the program to the user
+            ExplainToUser();
             //Call the shoe of cards
             Shoe shoeOfCards = new Shoe();
 
-            //Explain the program to the user
-            ExplainToUser();
+            //shuffle the shoe of cards
+            shoeOfCards.Shuffle();
+
+            //get a card from the shoe
+            Card card = shoeOfCards.Deal();
+
+            Console.WriteLine(card);
+
+            //Wait for the user to quit the program
+            Console.ReadLine();
 
 
         }
+
         public static void ExplainToUser()
         {
             Console.WriteLine();
