@@ -34,5 +34,9 @@ namespace BlackJackGame.Resources
                 Console.WriteLine(hand[i]);//show element in the hand
             }
         }
+
+        public void DiscardHand() {
+            hand.Clear();
+        }
     }
 }

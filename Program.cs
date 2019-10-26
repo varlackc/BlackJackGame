@@ -27,7 +27,8 @@ namespace BlackJackGame
             player.AddCardToHand(card);
 
             player.ShowHand();
-
+            player.DiscardHand();
+            player.ShowHand();
             //Wait for the user to quit the program
             Console.ReadLine();
 
