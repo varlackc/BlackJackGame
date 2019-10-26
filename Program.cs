@@ -18,7 +18,7 @@ namespace BlackJackGame
             ExplainToUser();
 
             // display all 52 Cards in the order which they are dealt
-            for (var i = 0; i < 52; ++i)
+            for (int i = 0; i < 52; ++i)
             {
                 var tempCarValue = myDeckOfCards.DealCard(); // create a temporary card value that holds the dealed card
                 int handPosition = i % hand.Length; //get the position the card in the hand
