@@ -21,6 +21,15 @@ namespace BlackJackGame
 
             Console.WriteLine(card);
 
+            //Ask the player for their name
+            Player player = new Player();
+            player.GetName();
+
+            player.AddCardToHand(card);
+            player.AddCardToHand(card);
+
+            player.ShowHand();
+
             //Wait for the user to quit the program
             Console.ReadLine();
 
