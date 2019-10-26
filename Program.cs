@@ -8,20 +8,32 @@ namespace BlackJackGame
         // execute app
         static void Main(string[] args)
         {
+            //declare variables
+            bool gameLoop = true;
+
             //Explain the program to the user
             ExplainToUser();
-            //Call the shoe of cards
-            Shoe shoeOfCards = new Shoe();
 
-            //shuffle the shoe of cards
-            shoeOfCards.Shuffle();
-
-            //get a card from the shoe
-            Card card = shoeOfCards.Deal();
 
             //Ask the player for their name
             Player player = new Player();
             player.GetName();
+
+            //Loop until the user desides to quit the game
+            while (gameLoop == true) {
+
+            }
+            
+
+            //Call the shoe of cards
+            //Shoe shoeOfCards = new Shoe();
+
+            //shuffle the shoe of cards
+            //shoeOfCards.Shuffle();
+
+            //get a card from the shoe
+            //Card card = shoeOfCards.Deal();
+
 
             player.AddCardToHand(card);
             player.AddCardToHand(card);
