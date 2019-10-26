@@ -43,7 +43,7 @@ namespace BlackJackGame.Resources
             //create a new card
             Card card = new Card(null, null);
 
-            //pay the hand
+            //play the hand
             card = shoe.Deal();//get a card from the shoe
             AddCardToHand(card);// add to hand
             card = shoe.Deal();
