@@ -9,6 +9,7 @@ namespace BlackJackGame.Resources
     {
         public string name;
         public List<Card> hand = new List<Card>();
+        public int winningCount = 0;
 
         public Player()
         {

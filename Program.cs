@@ -19,8 +19,6 @@ namespace BlackJackGame
             //get a card from the shoe
             Card card = shoeOfCards.Deal();
 
-            Console.WriteLine(card);
-
             //Ask the player for their name
             Player player = new Player();
             player.GetName();

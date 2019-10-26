@@ -26,19 +26,6 @@ namespace BlackJackGame.Resources
                 Card currentCard = new Card(faces[i % 13], suits[i % 4]);//create new card
                 shoeOfCards.Add(currentCard);//add the current card to the shoe
             }
-
-            //Add a section to create the shoe, it should be a list of cards
-
-
-            //show the shuffled items in the list
-            /*
-            Console.WriteLine("-------------------------------------");
-            for (int i = 0; i < shoeOfCards.Count; i++)
-            {
-                Console.WriteLine(shoeOfCards[i]);
-            }
-            */
-
         }
 
 
@@ -59,14 +46,6 @@ namespace BlackJackGame.Resources
                 shoeOfCards[first] = shoeOfCards.ElementAt(second);
                 shoeOfCards[second] = temp;
             }
-
-            //show the shuffled items in the list
-            /*
-            Console.WriteLine("-------------------------------------");
-            for (int i = 0; i < shoeOfCards.Count; i++) {
-                Console.WriteLine(shoeOfCards[i]);
-            }
-            */
         }
 
         public Card Deal() {
@@ -76,6 +55,5 @@ namespace BlackJackGame.Resources
 
             return card;
         }
-
     }
 }
