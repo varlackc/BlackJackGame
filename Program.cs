@@ -10,6 +10,8 @@ namespace BlackJackGame
         {
             //declare variables
             bool gameLoop = true;
+            Card card = new Card(null,null);// declare an empty card
+            string userResponse;
 
             //Explain the program to the user
             ExplainToUser();
@@ -21,30 +23,39 @@ namespace BlackJackGame
 
             //Loop until the user desides to quit the game
             while (gameLoop == true) {
+                //Call the shoe of cards
+                Shoe shoeOfCards = new Shoe();
 
-            }
-            
-
-            //Call the shoe of cards
-            //Shoe shoeOfCards = new Shoe();
-
-            //shuffle the shoe of cards
-            //shoeOfCards.Shuffle();
-
-            //get a card from the shoe
-            //Card card = shoeOfCards.Deal();
+                //shuffle the shoe of cards
+                shoeOfCards.Shuffle();
 
 
-            player.AddCardToHand(card);
-            player.AddCardToHand(card);
+                //pay the hand
+                card = shoeOfCards.Deal();//get a card from the shoe
+                player.AddCardToHand(card);// add to hand
+                card = shoeOfCards.Deal();
+                player.AddCardToHand(card);
 
-            player.ShowHand();
-            player.DiscardHand();
-            player.ShowHand();
-            //Wait for the user to quit the program
-            Console.ReadLine();
+                //show hand
+                player.ShowHand();
+                
+                //discard hand
+                player.DiscardHand();
 
+                Console.Write("Do You Want To Play Another Hand? Y / N > ");
+                userResponse = Console.ReadLine();
+                Console.WriteLine();
 
+                //determine if the game must stop or continue
+                if (userResponse.ToUpperInvariant() == "Y" || userResponse.ToUpperInvariant() == "YES")
+                {
+                    gameLoop = true;
+                }
+                else {
+                    gameLoop = false;
+                    Environment.Exit(0);
+                }
+            }   
         }
 
         public static void ExplainToUser()
@@ -60,6 +71,5 @@ namespace BlackJackGame
             Console.WriteLine("\t-----------------------------------------------");
             Console.WriteLine();
         }
-
     }
 }
