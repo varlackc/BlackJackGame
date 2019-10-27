@@ -10,12 +10,16 @@ namespace BlackJackGame
         {
             //declare variables
             bool gameLoop = true;
+            bool gameHit = true;
             Card card = new Card(null,null);// declare an empty card
             string userResponse;
+            string userHit;
 
             //Explain the program to the user
             ExplainToUser();
 
+            //Create a dealer
+            Dealer dealer = new Dealer();
 
             //Ask the player for their name
             Player player = new Player();
@@ -29,14 +33,40 @@ namespace BlackJackGame
                 //shuffle the shoe of cards
                 shoeOfCards.Shuffle();
 
+                //Dealer hand is produced
+                dealer.PlayHand(shoeOfCards);
+
                 //pay the hand give the shoe of cards to the user
                 player.PlayHand(shoeOfCards);
+                player.PopulateHandValueArray();
 
-                //show hand
+                //Peek Dealer Hand 
+                dealer.PeekHand();
+
+                //show player hand
                 player.ShowHand();
+                player.CalculateHandValue();
+
+                // Do you want to hit?
+                while (gameHit == true) {
+                    Console.Write("Do You Want To Hit? Y / N > ");
+                    userHit = Console.ReadLine();
+
+                    if (userHit.ToUpperInvariant() == "Y" || userHit.ToUpperInvariant() == "YES")
+                    {
+                        player.AddCardToHand(shoeOfCards.Deal());//add a card to the hand
+                        player.ShowHand();//show the hand
+                        player.PopulateHandValueArray();
+                        player.CalculateHandValue();
+                    }
+                    else {
+                        gameHit = false;
+                    }
+                }
                 
                 //discard hand
                 player.DiscardHand();
+                dealer.DiscardHand();
 
                 Console.Write("Do You Want To Play Another Hand? Y / N > ");
                 userResponse = Console.ReadLine();

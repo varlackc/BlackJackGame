@@ -10,23 +10,27 @@ namespace BlackJackGame.Resources
         public string name;
         public List<Card> hand = new List<Card>();
         public int winningCount = 0;
+        public int[] handValueArray = new int[12];
 
         public Player()
         {
             return;
         }
 
-        public void GetName() {
+        public void GetName()
+        {
             Console.Write("What Is Your Name? ");
             name = Console.ReadLine();
             Console.WriteLine("Hello " + name + " Let's Play A Game Of Black Jack! ");
         }
 
-        public void AddCardToHand(Card card) {
+        public void AddCardToHand(Card card)
+        {
             hand.Add(card);
         }
 
-        public void ShowHand() {
+        public void ShowHand()
+        {
 
             Console.WriteLine("Show The Player Cards At Hand: ");
             for(int i = 0; i < (hand.Count); i++)
@@ -35,11 +39,13 @@ namespace BlackJackGame.Resources
             }
         }
 
-        public void DiscardHand() {
+        public void DiscardHand()
+        {
             hand.Clear();
         }
 
-        public void PlayHand(Shoe shoe) {
+        public void PlayHand(Shoe shoe)
+        {
             //create a new card
             Card card = new Card(null, null);
 
@@ -48,6 +54,51 @@ namespace BlackJackGame.Resources
             AddCardToHand(card);// add to hand
             card = shoe.Deal();
             AddCardToHand(card);
+        }
+
+        public int CardValue(Card card)
+        {
+            int cardValue = 0;
+
+            //assign values to each possible card combination
+            if (card.ToString().Contains("A")) { cardValue = 11; }
+            if (card.ToString().Contains("2")) { cardValue = 2; }
+            if (card.ToString().Contains("3")) { cardValue = 3; }// check if there is a Three
+            if (card.ToString().Contains("4")) { cardValue = 4; }// check if there is a Four
+            if (card.ToString().Contains("5")) { cardValue = 5; }// check if there is a Five
+            if (card.ToString().Contains("6")) { cardValue = 6; }// check if there is a Six
+            if (card.ToString().Contains("7")) { cardValue = 7; }// check if there is a Seven
+            if (card.ToString().Contains("8")) { cardValue = 8; }// check if there is a Eight
+            if (card.ToString().Contains("9")) { cardValue = 9; }// check if there is a Nine
+            if (card.ToString().Contains("10")) { cardValue = 10; }// check if there is a Ten
+            if (card.ToString().Contains("J")) { cardValue = 10; }// check if there is a Jack
+            if (card.ToString().Contains("Q")) { cardValue = 10; }// check if there is a Queen
+            if (card.ToString().Contains("K")) { cardValue = 10; }// check if there is a King
+
+            return cardValue;
+        }
+
+        public void PopulateHandValueArray()
+        {
+            //Populate HandValueArray
+            for (int i = 0; i < hand.Count; i++)
+            {
+                handValueArray[i] = CardValue(hand[i]);//update the handValueArray
+            }
+        }
+
+        public int CalculateHandValue() {
+
+            int result = 0;
+
+            for (int i = 0; i < hand.Count; i++)
+            {
+                result += handValueArray[i];
+            }
+
+            Console.WriteLine(" Calculated Hand Value: "+result);
+
+            return result;
         }
     }
 }
