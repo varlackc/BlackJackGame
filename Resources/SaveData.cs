@@ -21,9 +21,9 @@ namespace BlackJackGame.Resources
             if (File.Exists(path))
             {
                 Console.WriteLine(path);
-                Console.WriteLine("The File Exist");
+                Console.WriteLine("Update File");
                 
-                    using (StreamWriter streamWriter = new StreamWriter(path, true))
+                    using (StreamWriter streamWriter = new StreamWriter(path, false))
                     {
                         streamWriter.WriteLine("Number of games: "+gameCount);
                         streamWriter.WriteLine("");
@@ -36,10 +36,10 @@ namespace BlackJackGame.Resources
             else
             {
                 Console.WriteLine(path);
-                Console.WriteLine("The File Has Been Created");
+                Console.WriteLine("Create File");
                 using (FileStream file = File.Create(path))
                 {
-                    using (StreamWriter streamWriter = new StreamWriter(path, true))
+                    using (StreamWriter streamWriter = new StreamWriter(path, false))
                     {
                         streamWriter.WriteLine("Number of games: ####");
                         streamWriter.WriteLine("");
