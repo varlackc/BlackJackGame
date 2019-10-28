@@ -5,6 +5,9 @@ using System.Linq;
 
 namespace BlackJackGame.Resources
 {
+    /// <summary>
+    /// Class Of Shoe Of Cards
+    /// </summary>
     public class Shoe
     {
         private static Random randomNumbers = new Random();
@@ -29,7 +32,9 @@ namespace BlackJackGame.Resources
         }
 
 
-        // shuffle deck of Cards 
+        /// <summary>
+        /// Method To Shuffle The Shoe Of Cards
+        /// </summary>
         public void Shuffle()
         {
             //after shuffling, dealing should start at deck[0] again
@@ -48,6 +53,10 @@ namespace BlackJackGame.Resources
             }
         }
 
+        /// <summary>
+        /// Method To Deal A Card From The Shoe Of Cards
+        /// </summary>
+        /// <returns>Card</returns>
         public Card Deal() {
 
             Card card = shoeOfCards[0];
