@@ -12,6 +12,10 @@ namespace BlackJackGame.Resources
         {
             path = Directory.GetCurrentDirectory();
             path += "Log.txt";
+        }
+
+        public void Save()
+        {
             if (File.Exists(path))
             {
                 Console.WriteLine(path);
@@ -22,7 +26,6 @@ namespace BlackJackGame.Resources
                 Console.WriteLine(path);
                 Console.WriteLine("The File Does Not Exist");
             }
-
         }
     }
 }

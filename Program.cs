@@ -23,6 +23,7 @@ namespace BlackJackGame
             int winCount = 0;
             Dictionary<string, int> gameDictionary = new Dictionary<string, int>(); //winning hand, # of times achieved
             string key;
+            SaveData dataProcess = new SaveData();
 
         //Explain the program to the user
         ExplainToUser();
@@ -105,6 +106,8 @@ namespace BlackJackGame
 
                                 gameDictionary.Add(dealerHandValue.ToString() + " =>", 1);
                             }
+                            //save the results
+                            dataProcess.Save();
                         }
 
                         gameHit = false;
