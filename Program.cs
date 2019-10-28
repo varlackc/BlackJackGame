@@ -126,7 +126,7 @@ namespace BlackJackGame
                 }
                 else {
                     //save the results
-                    dataProcess.Save();
+                    dataProcess.Save(gameCount, winCount, gameDictionary);
                     //stop the game from running
                     gameLoop = false;
                     Environment.Exit(0);
