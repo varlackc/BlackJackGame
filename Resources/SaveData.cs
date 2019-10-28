@@ -30,6 +30,11 @@ namespace BlackJackGame.Resources
                         streamWriter.WriteLine("Player Success: "+ successPercentage);
                         streamWriter.WriteLine("");
                         streamWriter.WriteLine("Player Winning hand => # of times achieved");
+
+                        foreach (KeyValuePair<string, int> gameKeyValuePair in gameDictionary)
+                        {
+                        streamWriter.WriteLine("{0} {1}",gameKeyValuePair.Key, gameKeyValuePair.Value);
+                        }
                     }
                 
             }
