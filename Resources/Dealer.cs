@@ -64,6 +64,8 @@ namespace BlackJackGame.Resources
             AddCardToHand(card);// add to hand
             card = shoe.Deal();
             AddCardToHand(card);
+            PopulateHandValueArray();
+            CalculateHandValue();
         }
 
         /// <summary>

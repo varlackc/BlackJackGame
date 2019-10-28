@@ -4,4 +4,4 @@ Player Success: NaN%
 
 Player Winning hand => # of times achieved
 
-Time Taken: 00:01:19.4991052
+Time Taken: 00:00:59.7523655
