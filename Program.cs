@@ -4,9 +4,15 @@ using BlackJackGame.Resources;
 
 namespace BlackJackGame
 {
+    /// <summary>
+    /// The Main Section 
+    /// </summary>
     class Program
     {
-        // execute app
+        /// <summary>
+        /// Main Method
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             //declare the start time 
@@ -139,6 +145,9 @@ namespace BlackJackGame
             }   
         }
 
+        /// <summary>
+        /// Method to Explain The Program To The User
+        /// </summary>
         public static void ExplainToUser()
         {
             Console.WriteLine();
@@ -153,6 +162,12 @@ namespace BlackJackGame
             Console.WriteLine();
         }
 
+        /// <summary>
+        /// Method To Calculate The Game Results
+        /// </summary>
+        /// <param name="playerResult">Player Hand Value</param>
+        /// <param name="dealerResult">Dealer hand Value</param>
+        /// <returns>Boolean Value To Determine If The User Wins</returns>
         public static bool GameResult(int playerResult, int dealerResult)
         {
             bool result = false;
