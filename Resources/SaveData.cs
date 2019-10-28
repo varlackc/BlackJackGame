@@ -58,6 +58,8 @@ namespace BlackJackGame.Resources
                         {
                             streamWriter.WriteLine("{0} {1}", gameKeyValuePair.Key, gameKeyValuePair.Value);
                         }
+
+                        streamWriter.WriteLine("Time Taken: " + timeTaken);
                     }
                 }
             }
