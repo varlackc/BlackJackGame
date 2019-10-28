@@ -27,7 +27,7 @@ namespace BlackJackGame.Resources
                     {
                         streamWriter.WriteLine("Number of games: "+gameCount);
                         streamWriter.WriteLine("");
-                        streamWriter.WriteLine("Player Success: "+ successPercentage);
+                        streamWriter.WriteLine("Player Success: "+ successPercentage +"%");
                         streamWriter.WriteLine("");
                         streamWriter.WriteLine("Player Winning hand => # of times achieved");
 
@@ -46,11 +46,16 @@ namespace BlackJackGame.Resources
                 {
                     using (StreamWriter streamWriter = new StreamWriter(path, false))
                     {
-                        streamWriter.WriteLine("Number of games: ####");
+                        streamWriter.WriteLine("Number of games: " + gameCount);
                         streamWriter.WriteLine("");
-                        streamWriter.WriteLine("Player Success: ");
+                        streamWriter.WriteLine("Player Success: " + successPercentage + "%");
                         streamWriter.WriteLine("");
                         streamWriter.WriteLine("Player Winning hand => # of times achieved");
+
+                        foreach (KeyValuePair<string, int> gameKeyValuePair in gameDictionary)
+                        {
+                            streamWriter.WriteLine("{0} {1}", gameKeyValuePair.Key, gameKeyValuePair.Value);
+                        }
                     }
                 }
             }
