@@ -1,4 +1,13 @@
-﻿using System;
+﻿/*
+    Programming Challenge: Black Jack Game Simulation
+    Author: Carlos Maxwell Varlack
+
+    Description: Object oriented program that runs an automated game of Blackjack with a shoe 
+                 (collection of decks) of 6 decks of cards.  There will be a dealer and one player.  
+                 The Application Save The Results In A Log File.  
+*/
+
+using System;
 using System.Collections.Generic;
 using BlackJackGame.Resources;
 
