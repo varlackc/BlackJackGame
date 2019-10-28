@@ -7,6 +7,9 @@ using System.Text;
 
 namespace BlackJackGame.Resources
 {
+    /// <summary>
+    /// Card Class 
+    /// </summary>
     public class Card
     {
 
