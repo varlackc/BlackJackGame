@@ -106,8 +106,6 @@ namespace BlackJackGame
 
                                 gameDictionary.Add(dealerHandValue.ToString() + " =>", 1);
                             }
-                            //save the results
-                            dataProcess.Save();
                         }
 
                         gameHit = false;
@@ -127,6 +125,9 @@ namespace BlackJackGame
                     Console.Clear();
                 }
                 else {
+                    //save the results
+                    dataProcess.Save();
+                    //stop the game from running
                     gameLoop = false;
                     Environment.Exit(0);
                 }

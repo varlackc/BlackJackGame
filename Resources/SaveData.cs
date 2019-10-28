@@ -11,7 +11,7 @@ namespace BlackJackGame.Resources
         public SaveData()
         {
             path = Directory.GetCurrentDirectory();
-            path += "Log.txt";
+            path += "\\Log.txt";
         }
 
         public void Save()
