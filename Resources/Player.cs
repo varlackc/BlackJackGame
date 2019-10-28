@@ -5,6 +5,9 @@ using System.Text;
 
 namespace BlackJackGame.Resources
 {
+    /// <summary>
+    /// Player Class Controls The Player's Actions
+    /// </summary>
     public class Player
     {
         public string name;
@@ -17,6 +20,9 @@ namespace BlackJackGame.Resources
             return;
         }
 
+        /// <summary>
+        /// Get The Name Of The User
+        /// </summary>
         public void GetName()
         {
             Console.Write("What Is Your Name? ");
@@ -26,11 +32,18 @@ namespace BlackJackGame.Resources
             Console.WriteLine("");
         }
 
+        /// <summary>
+        /// Add A Card To The User Hand
+        /// </summary>
+        /// <param name="card">Card Type </param>
         public void AddCardToHand(Card card)
         {
             hand.Add(card);
         }
 
+        /// <summary>
+        /// Show The Player Hand To The User
+        /// </summary>
         public void ShowHand()
         {
 
@@ -41,11 +54,18 @@ namespace BlackJackGame.Resources
             }
         }
 
+        /// <summary>
+        /// Discard The Player Hand
+        /// </summary>
         public void DiscardHand()
         {
             hand.Clear();
         }
 
+        /// <summary>
+        /// Play The Initial Player Hand
+        /// </summary>
+        /// <param name="shoe"></param>
         public void PlayHand(Shoe shoe)
         {
             //create a new card
@@ -58,6 +78,11 @@ namespace BlackJackGame.Resources
             AddCardToHand(card);
         }
 
+        /// <summary>
+        /// Calculate An Individual Card Value
+        /// </summary>
+        /// <param name="card">Card Data Type</param>
+        /// <returns>Card Value</returns>
         public int CardValue(Card card)
         {
             int cardValue = 0;
@@ -80,6 +105,9 @@ namespace BlackJackGame.Resources
             return cardValue;
         }
 
+        /// <summary>
+        /// Populates The Player Hand Value Array
+        /// </summary>
         public void PopulateHandValueArray()
         {
             //Populate HandValueArray
@@ -89,6 +117,10 @@ namespace BlackJackGame.Resources
             }
         }
 
+        /// <summary>
+        /// Calculates The Numeric Value Of The Entire Hand
+        /// </summary>
+        /// <returns>The Numeric Value Of The Hand</returns>
         public int CalculateHandValue() {
 
             int result = 0;
