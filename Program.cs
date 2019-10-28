@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using BlackJackGame.Resources;
 
 namespace BlackJackGame
@@ -10,6 +9,9 @@ namespace BlackJackGame
         // execute app
         static void Main(string[] args)
         {
+            //declare the start time 
+            DateTime start = DateTime.Now;
+
             //declare variables
             bool gameLoop = true;
             bool gameHit = true;
@@ -125,8 +127,11 @@ namespace BlackJackGame
                     Console.Clear();
                 }
                 else {
+                    //generate the time stamp
+                    TimeSpan timeTaken = DateTime.Now - start;
+
                     //save the results
-                    dataProcess.Save(gameCount, winCount, gameDictionary);
+                    dataProcess.Save(gameCount, winCount, gameDictionary, timeTaken);
                     //stop the game from running
                     gameLoop = false;
                     Environment.Exit(0);

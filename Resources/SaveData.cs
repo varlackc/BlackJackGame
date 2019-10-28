@@ -14,7 +14,7 @@ namespace BlackJackGame.Resources
             path += "\\Log.txt";
         }
 
-        public void Save(int gameCount, int winCount, Dictionary<string, int> gameDictionary)
+        public void Save(int gameCount, int winCount, Dictionary<string, int> gameDictionary, TimeSpan timeTaken)
         {
             double successPercentage = ((double)(winCount) / (double)(gameCount))*100;
 
@@ -35,7 +35,9 @@ namespace BlackJackGame.Resources
                         {
                         streamWriter.WriteLine("{0} {1}",gameKeyValuePair.Key, gameKeyValuePair.Value);
                         }
-                    }
+
+                        streamWriter.WriteLine("Time Taken: "+timeTaken);
+                }
                 
             }
             else
