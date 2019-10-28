@@ -1,11 +1,4 @@
-﻿/*
-    Programming Challenge: Black Jack Game Simulation
-    Author: Carlos Maxwell Varlack
-
-    Description: 
- */
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
