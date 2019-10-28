@@ -16,6 +16,8 @@ namespace BlackJackGame.Resources
 
         public void Save(int gameCount, int winCount, Dictionary<string, int> gameDictionary)
         {
+            double successPercentage = ((double)(winCount) / (double)(gameCount))*100;
+
             if (File.Exists(path))
             {
                 Console.WriteLine(path);
@@ -23,9 +25,9 @@ namespace BlackJackGame.Resources
                 
                     using (StreamWriter streamWriter = new StreamWriter(path, true))
                     {
-                        streamWriter.WriteLine("Number of games: ####");
+                        streamWriter.WriteLine("Number of games: "+gameCount);
                         streamWriter.WriteLine("");
-                        streamWriter.WriteLine("Player Success: ");
+                        streamWriter.WriteLine("Player Success: "+ successPercentage);
                         streamWriter.WriteLine("");
                         streamWriter.WriteLine("Player Winning hand => # of times achieved");
                     }
