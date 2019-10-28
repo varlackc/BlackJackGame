@@ -1,7 +1,7 @@
-Number of games: 1
+Number of games: 0
 
-Player Success: 100%
+Player Success: NaN%
 
 Player Winning hand => # of times achieved
-12 => 1
-Time Taken: 00:01:25.6467519
+
+Time Taken: 00:01:19.4991052

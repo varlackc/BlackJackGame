@@ -92,10 +92,40 @@ namespace BlackJackGame.Resources
         public int CalculateHandValue() {
 
             int result = 0;
+            int secondCount = 0;
+            string userResponse;
 
             for (int i = 0; i < hand.Count; i++)
             {
                 result += handValueArray[i];
+            }
+
+            //if the maximum value is exided, look to see if an A is present
+            if (result > 21) {
+
+                result = 0;
+                for (int i = 0; i < hand.Count; i++)
+                {
+                    if (handValueArray[i] == 11)
+                    {
+                        Console.WriteLine("");
+                        Console.Write("Do you Want to Change The Value Of A From 11 To 1 ? Y/N > ");//ask the user to change values
+                        userResponse = Console.ReadLine();
+                        Console.WriteLine();
+
+                        if (userResponse.ToUpper() == "Y" || userResponse.ToUpper() == "YES")
+                        {
+                            handValueArray[i] = 1;
+                        }
+
+                    }
+                }
+                //once all of the values are changed re calculate the hand value
+                for (int i = 0; i < hand.Count; i++)
+                {
+                    secondCount += handValueArray[i];
+                }
+                result = secondCount;
             }
 
             return result;
