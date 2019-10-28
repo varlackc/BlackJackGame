@@ -4,6 +4,9 @@ using System.Text;
 
 namespace BlackJackGame.Resources
 {
+    /// <summary>
+    /// Dealer Class Determines The Dealer Behaviour
+    /// </summary>
     class Dealer
     {
         public List<Card> hand = new List<Card>();
@@ -17,11 +20,18 @@ namespace BlackJackGame.Resources
             return;
         }
 
+        /// <summary>
+        /// Adds A Cards To The Dealer Hand
+        /// </summary>
+        /// <param name="card">Takes A Cards As A Parameter</param>
         public void AddCardToHand(Card card)
         {
             hand.Add(card);
         }
 
+        /// <summary>
+        /// Shows The Hand To The User
+        /// </summary>
         public void ShowHand()
         {
 
@@ -32,11 +42,18 @@ namespace BlackJackGame.Resources
             }
         }
 
+        /// <summary>
+        /// Discard The Dealer Hand
+        /// </summary>
         public void DiscardHand()
         {
             hand.Clear();
         }
 
+        /// <summary>
+        /// Allows The Dealer To Play The Initial Hand
+        /// </summary>
+        /// <param name="shoe">Takes The Shoe Of Cards As An Input</param>
         public void PlayHand(Shoe shoe)
         {
             //create a new card
@@ -49,6 +66,9 @@ namespace BlackJackGame.Resources
             AddCardToHand(card);
         }
 
+        /// <summary>
+        /// Allows The User To Peak At One Card In The Dealer Hand
+        /// </summary>
         public void PeekHand()
         {
             //Explain to the user
@@ -65,6 +85,11 @@ namespace BlackJackGame.Resources
             Console.WriteLine();
         }
 
+        /// <summary>
+        /// Determines The Value Of One Card
+        /// </summary>
+        /// <param name="card">Takes A Card As A Parameter</param>
+        /// <returns>The Value Of The Card</returns>
         public int CardValue(Card card)
         {
             int cardValue = 0;
@@ -87,6 +112,9 @@ namespace BlackJackGame.Resources
             return cardValue;
         }
 
+        /// <summary>
+        /// Populate The Dealer Hand Value Array
+        /// </summary>
         public void PopulateHandValueArray()
         {
             //Populate HandValueArray
@@ -96,6 +124,10 @@ namespace BlackJackGame.Resources
             }
         }
 
+        /// <summary>
+        /// Calculate The Numerical Value Of The Dealer Hand 
+        /// </summary>
+        /// <returns></returns>
         public int CalculateHandValue()
         {
             int result = 0;
@@ -108,10 +140,13 @@ namespace BlackJackGame.Resources
             return result;
         }
 
+        /// <summary>
+        /// Allow The Dealer To Play
+        /// </summary>
+        /// <param name="shoe">Takes A Shoe Of Cards AS An Input</param>
+        /// <param name="playerHandValue">Takes The Player Hand Value As An Input</param>
         public void DealerPlay(Shoe shoe, int playerHandValue)
         {
-
-
             int dealerHandValue = CalculateHandValue();//issue is here
 
             if (dealerHandValue < 16)
@@ -126,7 +161,7 @@ namespace BlackJackGame.Resources
                 AddCardToHand(card);// add to hand
             }
             else {
-                //
+                //An Error Most Likely Has Occurred If This Section Is Reached
             }
         }
 
