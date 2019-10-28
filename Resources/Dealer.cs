@@ -8,6 +8,9 @@ namespace BlackJackGame.Resources
     {
         public List<Card> hand = new List<Card>();
         public int[] handValueArray = new int[12];
+        
+        //create a new card
+        Card card = new Card(null, null);
 
         public Dealer()
         {
@@ -22,7 +25,7 @@ namespace BlackJackGame.Resources
         public void ShowHand()
         {
 
-            Console.WriteLine("Show The Player Cards At Hand: ");
+            Console.WriteLine("Show The Dealer Cards At Hand: ");
             for (int i = 0; i < (hand.Count); i++)
             {
                 Console.WriteLine(hand[i]);//show element in the hand
@@ -95,7 +98,6 @@ namespace BlackJackGame.Resources
 
         public int CalculateHandValue()
         {
-
             int result = 0;
 
             for (int i = 0; i < hand.Count; i++)
@@ -103,9 +105,29 @@ namespace BlackJackGame.Resources
                 result += handValueArray[i];
             }
 
-            Console.WriteLine(" Calculated Hand Value: " + result);
-
             return result;
+        }
+
+        public void DealerPlay(Shoe shoe, int playerHandValue)
+        {
+
+
+            int dealerHandValue = CalculateHandValue();//issue is here
+
+            if (dealerHandValue < 16)
+            {
+                card = shoe.Deal();//get a card from the shoe
+                AddCardToHand(card);// add to hand
+            }
+
+            else if ((playerHandValue < 21) && (dealerHandValue < playerHandValue))
+            {
+                card = shoe.Deal();//get a card from the shoe
+                AddCardToHand(card);// add to hand
+            }
+            else {
+                //
+            }
         }
 
     }

@@ -21,7 +21,9 @@ namespace BlackJackGame.Resources
         {
             Console.Write("What Is Your Name? ");
             name = Console.ReadLine();
+            Console.WriteLine("");
             Console.WriteLine("Hello " + name + " Let's Play A Game Of Black Jack! ");
+            Console.WriteLine("");
         }
 
         public void AddCardToHand(Card card)
@@ -95,8 +97,6 @@ namespace BlackJackGame.Resources
             {
                 result += handValueArray[i];
             }
-
-            Console.WriteLine(" Calculated Hand Value: "+result);
 
             return result;
         }
